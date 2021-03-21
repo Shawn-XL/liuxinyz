@@ -1,0 +1,24 @@
+.article-card{
+    border-bottom: solid 1px lightgrey;
+    margin: 10px;
+}
+
+.article-card-title{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.article-card-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-card-link:hover{
+    color: inherit;
+    cursor: pointer;
+}
+
+.article-card-link:visited{
+    color: inherit;
+    cursor: pointer;
+}

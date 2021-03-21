@@ -1,0 +1,69 @@
+.card-image {
+    display: block;
+
+    height: 210px;
+    width: 210px;
+    border-radius: 50px;
+    padding:10px;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card {
+    width: 280px;
+    height: 612px;
+    background-color: white;
+    border: 1px;
+    border-color: lightgrey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  .job {
+      background-color: rgb(240,240,246);
+      border-radius: 5px;
+      padding: 5px;
+      font-size: 12px;
+  }
+
+  .name {
+      font-size: large;
+  }
+  .contact-ul {
+    list-style-type: none;
+    margin-top: 10px;
+  }
+  .li-icon{
+      margin-right: 5px;
+      font-size: 22px;
+      display: inline-flex;
+      vertical-align:middle;
+  }
+
+  .li-icon-linkedin{
+    margin-right: 5px;
+    font-size: 22px;
+    display: inline-flex;
+    vertical-align:middle;
+    color: #0072b1;
+  }
+
+  .contact-card{
+      margin-top: 10px;
+      border-top: solid 1px lightgrey;
+  }
+
+  .center-button{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .a-item {
+      text-decoration: none;
+      color:inherit;
+  }
+
+
