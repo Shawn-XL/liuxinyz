@@ -1,14 +1,13 @@
 import React, {PureComponent} from 'react';
 import { Link } from 'react-router-dom';
 import person from "../images/image.jpeg";
-import { Button } from "react-bootstrap";
 import "./personcard.css";
 
 class PersonCard extends PureComponent{
     render() {
         return(
             <div className="card center">
-                <img src={person} alt="Image" className="card-image center"/>
+                <img src={person} alt="personal" className="card-image center"/>
                 <label className="center name">Xin Liu</label>
                 <label className="center job">Software Developer</label>
 
@@ -29,19 +28,19 @@ class PersonCard extends PureComponent{
                         <li>
                             <label className="li-item">
                                 <span className="icon iconfont li-icon">&#xe618;</span>
-                                <span className="li-text"><a style={{"text-decoration":"none"}} className="a-item" href="mailto:liuxinyz@gmail.com">liuxinyz@gmail.com</a></span>
+                                <span className="li-text"><a style={{"textDecoration":"none"}} className="a-item" href="mailto:liuxinyz@gmail.com">liuxinyz@gmail.com</a></span>
                             </label>
                         </li>
                         <li>
                             <label className="li-item">
                                 <span className="icon iconfont li-icon-linkedin">&#xe8ca;</span>
-                                <span className="li-text"><a style={{"text-decoration":"none"}} className="a-item" href="https://www.linkedin.com/in/shawn-liu-bb623a90/">LinkedIn</a></span>
+                                <span className="li-text"><a style={{"textDecoration":"none"}} className="a-item" href="https://www.linkedin.com/in/shawn-liu-bb623a90/">LinkedIn</a></span>
                             </label>
                         </li>
                         <li>
                             <label className="li-item">
                                 <span className="icon iconfont li-icon">&#xe6a5;</span>
-                                <span className="li-text"><a style={{"text-decoration":"none"}} className="a-item" href="https://github.com/Shawn-XL">Github</a></span>
+                                <span className="li-text"><a style={{"textDecoration":"none"}} className="a-item" href="https://github.com/Shawn-XL">Github</a></span>
                             </label>
                         </li>
                         <li>

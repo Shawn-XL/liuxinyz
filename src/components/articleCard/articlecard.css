@@ -1,6 +1,7 @@
 .article-card{
     border-bottom: solid 1px lightgrey;
     margin: 10px;
+    max-width: 623px;
 }
 
 .article-card-title{

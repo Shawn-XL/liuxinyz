@@ -24,7 +24,7 @@ function App() {
                 <HeaderWithRouter />
                 <Container fluid>
                     <Row>
-                        <Col style={{"backgroundColor" : "red", "max-width":"330px"}}>
+                        <Col style={{"backgroundColor" : "red", "maxWidth":"330px"}}>
                             <PersonCard/>
                         </Col>
                         <Col style={{"backgroundColor" : "lightpink"}}>
