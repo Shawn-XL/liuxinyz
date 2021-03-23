@@ -15,12 +15,21 @@ class ArtcileCard extends PureComponent{
                     </label>
                 </div>
                 <div>
-                    <span>
-                        {article.get("content")}
+                    <span className="article-card-content">
+                        {this.getShortContent()}
                     </span>
                 </div>
             </div>
         )
+    }
+
+    getShortContent = () => {
+        const {article} = this.props;
+        if (article.get("content").length > 120) {
+            return article.get("content").substring(0, 120) + "...";
+        }else{
+            return article.get("content");
+        }
     }
 }
 

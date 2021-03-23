@@ -24,9 +24,9 @@ function App() {
                 <HeaderWithRouter />
                 <Container fluid>
                     <Row>
-                        <Col style={{"backgroundColor" : "red", "maxWidth":"330px"}}>
+                        {/*<Col style={{"backgroundColor" : "red", "maxWidth":"330px"}}>
                             <PersonCard/>
-                        </Col>
+                        </Col>*/}
                         <Col style={{"backgroundColor" : "lightpink"}}>
                             <Switch>
                                 <Route path="/" exact component={Home} />

@@ -2,11 +2,13 @@
     border-bottom: solid 1px lightgrey;
     margin: 10px;
     max-width: 623px;
+    padding: 30px;
 }
 
 .article-card-title{
     font-size: 18px;
     font-weight: 700;
+    color: rgb(51,51,51);
 }
 
 .article-card-link{
@@ -22,4 +24,10 @@
 .article-card-link:visited{
     color: inherit;
     cursor: pointer;
+}
+
+.article-card-content{
+    color: #999;
+    font-size: 13px;
+    line-height: 24px;
 }

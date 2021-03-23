@@ -32,6 +32,7 @@ class Blog extends PureComponent{
 
 
 }
+
 const mapStateToProps = (state) => {
     return {
         articles: state.getIn(['blog', 'articles']),
