@@ -1,5 +1,6 @@
 import { fromJS } from 'immutable';
-
+import { act } from 'react-dom/test-utils';
+import * as types from './actionTypes';
 
 const defaultState = fromJS({
     articles: [{
@@ -20,7 +21,11 @@ const defaultState = fromJS({
 });
 
 const reducer = (state = defaultState, action) => {
-    switch(action.Types) {
+    switch(action.type) {
+        case types.LOAD_BLOG_ARTICLES:
+            state.set('articles', action.data);
+            console.log(action.data, 'data is null');
+            return state;
         default:
             return state;
     }
