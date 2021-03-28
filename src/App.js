@@ -24,10 +24,10 @@ function App() {
                 <HeaderWithRouter />
                 <Container fluid>
                     <Row>
-                        {/*<Col style={{"backgroundColor" : "red", "maxWidth":"330px"}}>
+                        <Col style={{"backgroundColor" : "white", "maxWidth":"330px"}}>
                             <PersonCard/>
-                        </Col>*/}
-                        <Col style={{"backgroundColor" : "lightpink"}}>
+                        </Col>
+                        <Col style={{"backgroundColor" : "white"}}>
                             <Switch>
                                 <Route path="/" exact component={Home} />
                                 <Route path="/about" exact component={About} />
