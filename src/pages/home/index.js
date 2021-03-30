@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import ArtcileCard from '../../components/articleCard';
+//import ArtcileCard from '../../components/articleCard';
 
 class Home extends PureComponent{
     render() {

@@ -1,5 +1,7 @@
 import React, {PureComponent} from 'react';
 import { connect } from 'react-redux';
+import * as Types from './store/actionTypes';
+import axios from 'axios';
 import './article.css';
 
 class Article extends PureComponent{
@@ -17,6 +19,21 @@ class Article extends PureComponent{
 
         )
     }
+
+    componentDidMount() {
+        console.log("Article did mount");
+        const articleId = this.props.match.params.id;
+        axios.get('/api/article/' + articleId).then((res) => {
+            const data = res.data;
+            const action = {
+                type: Types.LOAD_ARTICLE,
+                data: data
+            }
+            this.props.loadArticle(action);
+        }).catch(() => {
+            console.log('Failed to Call Article List Api');
+        });
+    }
 }
 
 const mapStateToProps = (state) => {
@@ -27,7 +44,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-
+        loadArticle(action) {
+            dispatch(action);
+        }
     }
 }
 

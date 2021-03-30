@@ -8,7 +8,7 @@ import * as types from './store/actionTypes';
 class Blog extends PureComponent{
     
     render() {
-        const {articles} = this.props;
+        const { articles } = this.props;
         return(
             <div>
             {
@@ -24,22 +24,16 @@ class Blog extends PureComponent{
 
     getArticleCards = () => {
         const {articles} = this.props;
-
         const cards = articles.map((article)=>{
                 return (
-                    <ArtcileCard key={article.id} article={article}/>
+                    <ArtcileCard key={article.get('id')} article={article}/>
                 );
             });
         return cards;
     }
 
     componentDidMount() {
-        const action = {
-            type: types.LOAD_BLOG_ARTICLES,
-            data: "test"
-        }
-        this.props.loadblog(action);
-        axios.get('/article/list').then((res)=>{
+        axios.get('/api/article').then((res)=>{
             const data = res.data;
             const action = {
                 type: types.LOAD_BLOG_ARTICLES,

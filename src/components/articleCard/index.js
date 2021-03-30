@@ -9,8 +9,8 @@ class ArtcileCard extends PureComponent{
             <div className="article-card">
                 <div>
                     <label className="article-card-title">
-                        <Link className="article-card-link" to={"/article/" + article.get("id")}>
-                            {article.get("title")}
+                        <Link className="article-card-link" to={"/article/" + article.get('id')}>
+                            {article.get('title')}
                         </Link>
                     </label>
                 </div>
@@ -25,10 +25,10 @@ class ArtcileCard extends PureComponent{
 
     getShortContent = () => {
         const {article} = this.props;
-        if (article.get("content").length > 120) {
-            return article.get("content").substring(0, 120) + "...";
+        if (article.get('content').length > 120) {
+            return article.get('content').substring(0, 120) + "...";
         }else{
-            return article.get("content");
+            return article.get('content');
         }
     }
 }
