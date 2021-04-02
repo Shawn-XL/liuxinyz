@@ -8,7 +8,6 @@ class Header extends PureComponent{
         const {location} = this.props;
         return (
             <div>
-
                 <Navbar bg="info" variant="dark">
                     <a className="icon iconfont" 
                         style={{"float":"left", 
@@ -26,13 +25,13 @@ class Header extends PureComponent{
                         onSelect = {()=>{}}
                         >
                         <Nav.Item>
-                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="/home">Home</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="/blog">Blog</Nav.Link>
+                            <Nav.Link href="/home/blog">Blog</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href="/about">About</Nav.Link>
+                            <Nav.Link href="/home/about">About</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar>

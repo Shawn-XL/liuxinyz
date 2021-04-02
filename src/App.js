@@ -2,43 +2,26 @@ import Header from './header';
 import { Provider } from 'react-redux';
 import store from './store';
 import { withRouter } from "react-router";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Home, Blog, About, Article } from './pages';
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { VisitorHome, Blog, About, Article } from './pages';
 import {Container, Row, Col} from 'react-bootstrap';
 import PersonCard from './personcard';
+import Visitor from './Visitor';
+import Admin from './Admin';
 
-function NotFoundPage() {
-    return (
-        <div>
-            Page Not Found
-        </div>
-    );
-}
+
 
 function App() {
-    const HeaderWithRouter = withRouter(Header);
     return (
       <Provider store={store}>
         <Router>
-            <Route path="/">
-                <HeaderWithRouter />
-                <Container fluid>
-                    <Row>
-                        <Col style={{"backgroundColor" : "white", "maxWidth":"330px"}}>
-                            <PersonCard/>
-                        </Col>
-                        <Col style={{"backgroundColor" : "white"}}>
-                            <Switch>
-                                <Route path="/" exact component={Home} />
-                                <Route path="/about" exact component={About} />
-                                <Route path="/blog" exact component={Blog} />
-                                <Route path="/article/:id" component={Article} />
-                                <Route component={NotFoundPage} />
-                            </Switch>
-                        </Col>
-                    </Row>
-                </Container>
-            </Route>
+                <Switch>
+                <Route exact path="/">
+                    <Redirect to="/home" />
+                </Route>
+                <Route path="/home" component={Visitor} />
+                <Route path="/admin" component={Admin} />
+            </Switch>
         </Router>
       </Provider>
   );
