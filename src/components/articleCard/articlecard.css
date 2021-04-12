@@ -1,14 +1,18 @@
-.article-card{
-    border-bottom: solid 1px lightgrey;
-    margin: 10px;
+.article-card {
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 lightgrey;
+    margin-bottom: 40px;
     max-width: 623px;
     padding: 30px;
 }
 
-.article-card-title{
-    font-size: 18px;
+.article-card-title {
+    font-size: 1.8em;
     font-weight: 700;
     color: rgb(51,51,51);
+    width: 100%;
+    border-bottom:1px dashed lightgrey;
 }
 
 .article-card-link{

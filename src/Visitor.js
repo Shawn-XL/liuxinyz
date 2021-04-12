@@ -22,10 +22,10 @@ function Visitor() {
             <HeaderWithRouter />
             <Container fluid>
                 <Row>
-                    <Col style={{ "backgroundColor": "white", "maxWidth": "330px" }}>
+                    <Col lg={4} xs={0}>
                         <PersonCard />
                     </Col>
-                    <Col style={{ "backgroundColor": "white" }}>
+                    <Col lg={8} xs={12}>
                         <Switch>
                             <Route path="/home" exact component={Home} />
                             <Route path="/home/about" exact component={About} />

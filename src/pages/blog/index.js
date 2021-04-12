@@ -10,7 +10,7 @@ class Blog extends PureComponent{
     render() {
         const { articles } = this.props;
         return(
-            <div>
+            <div style={{"margin" : "10px"}}>
             {
                 articles.map((article)=>{
                     return (
@@ -33,7 +33,7 @@ class Blog extends PureComponent{
     }
 
     componentDidMount() {
-        axios.get('/api/article').then((res)=>{
+        axios.get('/api/articles').then((res)=>{
             const data = res.data;
             const action = {
                 type: types.LOAD_BLOG_ARTICLES,
